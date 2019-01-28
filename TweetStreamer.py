@@ -34,8 +34,8 @@ class TweetListener(tweepy.StreamListener):
         self.collected_tweet_list.append(self.tweet)
         self.tweet = []
         self.tweet_count += 1
-        # Specify number of tweets to collect
-        if self.tweet_count > 10:
+        # Specify number of tweets to collect (takes some time depending on keyword popularity) 
+        if self.tweet_count > 1000:
             return False
 
 
